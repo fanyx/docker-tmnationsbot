@@ -1,0 +1,3 @@
+[submodule "trackmania_nations_challenge_bot"]
+	path = trackmania_nations_challenge_bot
+	url = git://github.com/Excidion/trackmania_nations_challenge_bot.git
