@@ -1,16 +1,15 @@
 FROM python:3-buster
 
-RUN apt update && apt install -y git
-RUN mkdir -p /var/app
+RUN mkdir -p /var/app/
 
-WORKDIR /var/app
+COPY trackmania_nations_challenge_bot/* /var/app/
 
-RUN git clone https://github.com/Excidion/trackmania_nations_challenge_bot.git
+COPY config.ini /var/app/
 
-WORKDIR /var/app/trackmania_nations_challenge_bot
+COPY entrypoint.sh /
 
-COPY config.ini ./
+WORKDIR /var/app/
 
 RUN ["pip","install","-r","requirements.txt"]
 
-CMD ["python3","./main.py"]
+ENTRYPOINT ["/entrypoint.sh"]
