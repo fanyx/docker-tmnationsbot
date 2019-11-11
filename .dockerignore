@@ -1,4 +1,5 @@
 README.md
 .gitmodules
 .git
-
+build.sh
+.gitignore
