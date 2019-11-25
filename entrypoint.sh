@@ -12,13 +12,6 @@ then
     echo "Please consider filling the field, if you are protecting your server."
 fi
 
-if [[ -z "${WEB_DOMAIN}" ]]
-then
-    echo "Domain of your webserver was not specified."
-    echo "Functionality is not provided."
-    exit 2
-fi
-
 if [[ -z "${PLOT_DIR}" ]]
 then
     echo "The plot directory was not specified."
@@ -43,6 +36,13 @@ fi
 if [[ -z "${SQL_USER}" ]]
 then
     echo "The SQL user was not specified."
+    echo "Exiting..."
+    exit 1
+fi
+
+if [[ -z "${SQL_PWD}" ]]
+then
+    echo "The SQL password was not specified."
     echo "Exiting..."
     exit 1
 fi
