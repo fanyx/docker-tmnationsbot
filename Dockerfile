@@ -1,5 +1,7 @@
 FROM python:3-buster
 
+RUN ln -sf /usr/share/timezone/Europe/Berlin /etc/localtime
+
 RUN apt update && \
     apt install -y gettext-base
 
