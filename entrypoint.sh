@@ -61,12 +61,17 @@ then
     exit 1
 fi
 
-fi [[ -z "${TELEGRAM_GROUP_ID}" ]]
+if [[ -z "${TELEGRAM_GROUP_ID}" ]]
 then
     echo "The telegram group chat id is missing."
     echo "Exiting..."
     exit 1
 fi
+
+echo "Finished initialization"
+echo "Evaluating config file"
+
+envsubst < /var/app/_config.ini > /var/app/config.ini
 
 echo "Printing the complete configuration:"
 echo ""
