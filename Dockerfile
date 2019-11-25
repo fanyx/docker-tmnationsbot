@@ -1,4 +1,4 @@
-FROM python:3-buster
+FROM python:3-slim-buster
 
 RUN ln -sf /usr/share/timezone/Europe/Berlin /etc/localtime
 
