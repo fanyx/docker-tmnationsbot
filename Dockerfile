@@ -3,8 +3,8 @@ FROM python:3-slim-buster
 RUN apt update && \
     apt install -y gettext-base
 
-RUN echo "Europe/Berlin" > /etc/timezone && \
-    dpkg-reconfigure -f noninteractive tzdata
+RUN ln -snf /usr/share/zoneinfo/Europe/Berlin /etc/localtime && \
+    echo "Europe/Berlin" > /etc/timezone
 
 RUN mkdir -p /var/app/
 
