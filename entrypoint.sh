@@ -24,6 +24,7 @@ then
     echo "The name mapping was not specified."
     echo "Defaulting to /var/app/data/name_map.p"
     export NAME_MAP=/var/app/data/name_map.p
+fi
 
 if [[ -z "${SQL_HOST}" ]]
 then
