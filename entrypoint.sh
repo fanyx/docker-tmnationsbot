@@ -12,18 +12,11 @@ then
     echo "Please consider filling the field, if you are protecting your server."
 fi
 
-if [[ -z "${PLOT_DIR}" ]]
+if [[ -z "${DATA_DIR}" ]]
 then
     echo "The plot directory was not specified."
     echo "Defaulting to /var/app/data/plots"
-    export PLOT_DIR=/var/app/data/plots
-fi
-
-if [[ -z "${NAME_MAP}" ]]
-then
-    echo "The name mapping was not specified."
-    echo "Defaulting to /var/app/data/name_map.p"
-    export NAME_MAP=/var/app/data/name_map.p
+    export DATA_DIR=/var/app/data
 fi
 
 if [[ -z "${SQL_HOST}" ]]
