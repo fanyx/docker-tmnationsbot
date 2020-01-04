@@ -14,9 +14,9 @@ fi
 
 if [[ -z "${DATA_DIR}" ]]
 then
-    echo "The plot directory was not specified."
-    echo "Defaulting to /var/app/data/plots"
-    export DATA_DIR=/var/app/data
+    echo "The data directory was not specified."
+    echo "Defaulting to ./data"
+    export DATA_DIR=./data
 fi
 
 if [[ -z "${SQL_HOST}" ]]
