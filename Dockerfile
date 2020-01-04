@@ -8,7 +8,7 @@ RUN ln -snf /usr/share/zoneinfo/Europe/Berlin /etc/localtime && \
 
 RUN mkdir -p /var/app/
 
-COPY trackmania_nations_challenge_bot/* /var/app/
+COPY trackmania_nations_challenge_bot/ /var/app/
 
 COPY _config.ini /var/app/
 
