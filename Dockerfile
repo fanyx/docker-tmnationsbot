@@ -1,10 +1,7 @@
-FROM python:3-slim-buster
+FROM fanyx/docker-tmnationsbot-base:0.0.1
 
 RUN apt update && \
     apt install -y gettext-base
-
-RUN ln -snf /usr/share/zoneinfo/Europe/Berlin /etc/localtime && \
-    echo "Europe/Berlin" > /etc/timezone
 
 RUN mkdir -p /var/app/
 
@@ -16,6 +13,6 @@ COPY entrypoint.sh /
 
 WORKDIR /var/app/
 
-RUN ["pip","install","-r","requirements.txt"]
-
 ENTRYPOINT ["/entrypoint.sh"]
+
+CMD ["python3","/var/app/main.py"]

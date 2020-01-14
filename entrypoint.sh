@@ -80,4 +80,4 @@ cat /var/app/config.ini
 # Finished with docker logs.
 # Continuing to execution.
 
-exec python3 /var/app/main.py
+exec "$@"
