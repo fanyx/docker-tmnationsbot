@@ -1,4 +1,4 @@
-FROM fanyx/docker-tmnationsbot-base:0.0.1
+FROM docker.fanyx.xyz/docker-tmnationsbot-base:0.2.0
 
 RUN apt update && \
     apt install -y gettext-base
